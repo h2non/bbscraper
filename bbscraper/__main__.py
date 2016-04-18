@@ -9,7 +9,6 @@ import os
 import sys
 import argparse
 import csv
-import inspect
 from scraper import Scraper
 
 # Declare supported command-line flags
@@ -31,7 +30,6 @@ def main():
     writer = csv.writer(sys.stdout)
 
     try:
-        # print(inspect.getmembers(Scrape(writer), predicate=inspect.ismethod))
         Scraper(writer).scrape(url)
     except:
         print("Unexpected error:", sys.exc_info()[0])
