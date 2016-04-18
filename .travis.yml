@@ -1,0 +1,14 @@
+language: python
+python:
+  - "3.3"
+  - "3.4"
+  - "3.5"
+
+# command to install dependencies
+install:
+  - pip install -r requirements.txt
+  # Deal with issue on Travis builders re: multiprocessing.Queue :(
+  - "sudo rm -rf /dev/shm && sudo ln -s /run/shm /dev/shm"
+
+# command to run tests
+script: make test

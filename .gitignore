@@ -1,0 +1,13 @@
+*.pyc
+.coverage
+docs/_build/
+docs/_build
+bbscraper.egg-info/
+build/
+dist/
+.DS_Store
+*.swp
+.tox
+./_public
+*.csv
+__pycache__
